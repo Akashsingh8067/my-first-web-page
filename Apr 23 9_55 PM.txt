@@ -1,0 +1,521 @@
+Hotel 1.txt
+
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="562c63c6-6a75-4fd0-9366-e9a1a67fa8a7" activeEnvironment="Default" name="HotelRoomService" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="ec86819e-bc94-4f9d-ab95-a559e36e390f" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://webapps.tekstac.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://webapps.tekstac.com</con:endpoint></con:endpoints><con:resource name="" path="/HotelAPI/RoomService/updateRoomPrice" id="33b9ffc5-a9d2-465e-944a-d98f9f54fd0d"><con:settings/><con:parameters><con:parameter><con:name>roomId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>roomPrice</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="UpdateRoomPrice" id="47a33cee-8dbe-4c67-aeef-2f5e950e34ab" method="PUT"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/html;charset=utf-8</con:mediaType><con:status>415</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request1" id="f26cb44a-a2bf-431f-b3fc-b504bf397028" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://webapps.tekstac.com</con:endpoint><con:request>{
+"roomId":"301",
+"roomPrice":"5700"
+}
+</con:request><con:originalUri>https://webapps.tekstac.com/HotelAPI/RoomService/updateRoomPrice</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+<con:entry key="roomPrice" value="5700"/>
+<con:entry key="roomId" value="301"/>
+</con:parameters><con:parameterOrder><con:entry>roomId</con:entry><con:entry>roomPrice</con:entry></con:parameterOrder></con:request><con:request name="Request2" id="94194138-fb4c-4c4f-8c60-3fffe7b72381" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://webapps.tekstac.com</con:endpoint><con:request>{
+"roomId":"701",
+"roomPrice":"6000"
+}
+</con:request><con:originalUri>https://webapps.tekstac.com/HotelAPI/RoomService/updateRoomPrice</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+<con:entry key="roomPrice" value="6000"/>
+<con:entry key="roomId" value="701"/>
+</con:parameters></con:request></con:method></con:resource></con:interface><con:testSuite id="688a3537-e905-4486-9e47-b02a6474fd5c" name="HotelSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="a99418af-d65b-4cb0-899d-dac56f62dbbb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ModifyTestCase" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Request1" id="0a24270b-a059-4a7d-b14e-9060e1c7eb95"><con:settings/><con:config service="https://webapps.tekstac.com" resourcePath="/HotelAPI/RoomService/updateRoomPrice" methodName="UpdateRoomPrice" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request1" id="f26cb44a-a2bf-431f-b3fc-b504bf397028" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://webapps.tekstac.com</con:endpoint><con:request>{
+"roomId":"301",
+"roomPrice":"5700"
+}
+</con:request><con:originalUri>https://webapps.tekstac.com/HotelAPI/RoomService/updateRoomPrice</con:originalUri><con:assertion type="Simple Contains" id="624145bd-95e2-4580-b869-9491619c4085" name="Contains"><con:configuration><token>"roomPrice":5700</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="0f61286e-0a1b-4d5f-9a77-7cff75c3be83" name="Not Contains"><con:configuration><token>"roomPrice":5000</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+<con:entry key="roomPrice" value="5700"/>
+<con:entry key="roomId" value="301"/>
+</con:parameters><con:parameterOrder><con:entry>roomId</con:entry><con:entry>roomPrice</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="ab16a086-faf5-44e8-a575-f73f5562d31b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ModifyTestCase1" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Request2" id="75970dce-8b08-4bf2-bd76-ad486dcf3998"><con:settings/><con:config service="https://webapps.tekstac.com" resourcePath="/HotelAPI/RoomService/updateRoomPrice" methodName="UpdateRoomPrice" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request2" id="94194138-fb4c-4c4f-8c60-3fffe7b72381" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://webapps.tekstac.com</con:endpoint><con:request>{
+"roomId":"701",
+"roomPrice":"6000"
+}
+</con:request><con:assertion type="Simple Contains" id="66103716-2857-4c72-8445-7e989f495487" name="Contains"><con:configuration><token>&lt;roomPrice>6000.0&lt;/roomPrice></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="XPath Match" id="3e4fcd2b-4f34-4a2e-98ec-f18e7e9f5d0e" name="XPath Match"><con:configuration><path>/rooms/roomId/roomPrice</path><content>6000</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+<con:entry key="roomPrice" value="6000"/>
+<con:entry key="roomId" value="701"/>
+</con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+
+Train 
+---------
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="479c7288-2929-4ca4-82dc-cb4257fdfb0f" activeEnvironment="Default" name="TrainService" resourceRoot="" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config">
+    <con:settings/>
+        <con:interface xsi:type="con:RestService" id="b2d17655-0c7f-4845-ad59-856992da0420" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://webapps.tekstac.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+        <con:endpoint>https://webapps.tekstac.com</con:endpoint>
+        </con:endpoints>
+        <con:resource name="ViewTrainList" path="/TrainAPI/TrainService/viewTrainList" id="0755ee8a-50be-4119-ab86-993862eceb2b">
+            <con:settings/>
+        <con:parameters/>
+        <con:method name="ViewTrainList" id="e7386947-480a-44a6-8d39-81031bed65fd" method="GET"><con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>trains</con:element></con:representation><con:request name="Request 1" id="d0778f5d-ed80-4ab0-9fd0-d34d10ef597c" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+        </con:setting>
+        </con:settings><con:endpoint>https://webapps.tekstac.com</con:endpoint><con:request/><con:originalUri>https://webapps.tekstac.com/TrainAPI/TrainService/viewTrainList</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="76683c7a-b030-4188-af96-a68144545a61" name="ViewTrain"><con:description>TestSuite generated for REST Service [https://webapps.tekstac.com]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="df46784a-ea36-4cb2-b706-8895938600f2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ViewTestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [ViewTrainList] located at [/TrainAPI/TrainService/viewTrainList]</con:description><con:settings/><con:testStep type="restrequest" name="Request1" id="0b80d874-6b09-42fc-8df3-0b068f175575"><con:settings/><con:config service="https://webapps.tekstac.com" methodName="ViewTrainList" resourcePath="/TrainAPI/TrainService/viewTrainList" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request1" id="7308d8be-72ea-434b-83b7-c07e16d6dfac" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://webapps.tekstac.com</con:endpoint><con:request/><con:originalUri>https://webapps.tekstac.com/TrainAPI/TrainService/viewTrainList</con:originalUri><con:assertion type="Simple Contains" id="bad2eb39-2d45-4884-9790-04513f0d4637" name="Contains"><con:configuration><token>Coimbatore</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="XPath Match" id="9d1e0a0f-770f-4db0-9fc3-dd0b55f60d4c" name="XPath Match"><con:configuration><path>/trains/train[1]/departCity</path><content>Chennai</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="GroovyScript1" id="69ade585-81d8-456c-8a34-110c0ac23f54"><con:settings/><con:config><script>
+def requestStep=testRunner.runTestStepByName("Request1")
+if(requestStep.status){
+	log.info("ViewTestCase : Passed")
+}
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+
+MavenTestApp
+
+ pom.xml
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <!--MAVEN PROJECT-->
+  <groupId>com.build.maven.java</groupId>
+  <artifactId>MavenTestApp</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  
+  
+  
+  <name>MavenTestApp</name>
+  <url>http://maven.apache.org</url>
+  <!--DEPENDENCIES-->
+  <dependencies>
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>3.8.1</version>
+          <scope>test</scope>
+      </dependency>
+  </dependencies>
+ 
+ 
+ 
+ 
+ 
+</project>
+
+App.java
+
+package com.build.maven.java;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}
+
+AppTest.java
+
+package com.command.build.maven.java;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest 
+    extends TestCase
+{
+    /**
+     * Create the test case
+     *
+     * @param testName name of the test case
+     */
+    public AppTest( String testName )
+    {
+        super( testName );
+    }
+
+    /**
+     * @return the suite of tests being tested
+     */
+    public static Test suite()
+    {
+        return new TestSuite( AppTest.class );
+    }
+
+    /**
+     * Rigourous Test :-)
+     */
+    public void testApp()
+    {
+        assertTrue( true );
+    }
+}
+
+MavenJavaApp
+
+pom.xml 
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <!--MAVEN PROJECT-->
+  <groupId>com.build.maven.java</groupId>
+  <artifactId>MavenJavaApp</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  
+  
+  
+  <name>MavenJavaApp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+      <dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-java</artifactId>
+          <version>4.19.1</version>
+      </dependency>
+  </dependencies>
+</project>
+
+App.java
+
+package com.build.maven.java;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+   /*code getHelloWorld() here */
+   public static String getHelloWorld(){
+       return "Hello World!";
+   }
+   
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}
+
+Clone Repo
+
+# Initialize Git
+git init
+ 
+# Clone the repository
+git clone -b master http://student1:studentpassword@localhost:9080/student1/test1.git
+
+ Git Branch
+ 
+git init
+git branch DEV_feature
+git checkout DEV_feature
+ 
+ 
+Cucumber - UserPage
+
+//CREATE DRIVER USING THIS CLASS. YOU CAN MODIFY THIS CLASS
+
+
+ DriverSetup.java
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.FirefoxBinary;
+
+public class DriverSetup {
+    public static WebDriver getDriver() {
+		
+		/*  For Chrome Browser,
+		    please modify the below driver setup code
+		*/
+		
+		System.out.println("Launching Firefox browser..");
+		System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+		
+		FirefoxBinary firefoxary = new FirefoxBinary();
+		firefoxBinary.addCommandLineOptions("--headless");
+		FirefoxProfile profile=new FirefoxProfile();
+	    FirefoxOptions firefoxOptions = new FirefoxOptions();
+		firefoxOptions.setBinary(firefoxBinary);
+		firefoxOptions.setProfile(profile);
+		
+		WebDriver driver = new FirefoxDriver(firefoxOptions);
+		return driver;
+	}
+}
+
+
+Invoke.java 
+
+/** DO NOT CHANGE THIS CLASS. THIS CLASS IS FOR REFERENCE ONLY  **/
+
+import static org.junit.Assert.assertEquals;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.TestNG;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import org.testng.collections.Lists;
+
+
+public class Invoke {   // DO NOT change the class name
+	
+	public void checkAgent() {            // DO NOT change the method signature
+	    //Invoke the test using TestNG ONLY HERE.
+    	try {
+    		TestNG testng = new TestNG();
+    		List<String> suites = Lists.newArrayList();
+    		String workingDir = System.getProperty("user.dir");
+    		System.out.println("user.dir "+ workingDir);
+    		suites.add(workingDir + "/testng.xml");
+    		
+    		testng.setTestSuites(suites);
+    		testng.run();
+		} catch (Exception e) {	 	  	  		 	     	     	      	 	
+			//e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+	    Invoke iv=new Invoke();
+	    iv.checkAgent();
+	}
+}
+	
+	
+	
+UserPage.feature
+
+Feature: User form submission
+
+Scenario: Add User Details
+Given Start firefox Browser
+Then user navigate to the application home page
+When user enters Name as Rajesh, Address as Coimbatore, Mobile as 1213124536 and Email as Rajesh@test.Coimbatore
+When user click submit button
+Then it should display the result
+Then close the driver 
+
+UserPageDefinition.java
+//DO NOT CHANGE THE GIVEN TEMPLATE CODE. 
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import java.util.concurrent.TimeUnit;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+import org.junit.*;
+
+public class UserPageDefinition {   // DO NOT CHANGE THE CLASS NAME
+
+    // Use the below declared variable
+	public static WebDriver driver;
+	
+	//DO NOT CHANGE GIVEN SET OF CODE TO CREATE 'DRIVER'
+	@Given("Start firefox Browser")
+	public void Start_firefox_browser() {
+	    driver=DriverSetup.getDriver();
+	}
+	
+	@Then("user navigate to the application home page")
+	public void user_navigate_to_the_application_home_page(){
+	    // Implement code to navigate to the home page 
+	    driver.get("https://webapps.tekstac.com/Users");
+	    
+	    //Verify the url navigation with assert
+	    Assert.assertTrue(driver.getPageSource().contains("Address"));
+	}
+	
+    @When("user enters Name as Rajesh, Address as Coimbatore, Mobile as 1213124536 and Email as Rajesh@test.Coimbatore")
+    public void user_enters_name_as_address_as_mobile_as_and_email_as() {
+        // Implement code to fill the form
+        driver.findElement(By.id("name")).sendKeys("Rajesh");
+        driver.findElement(By.id("address")).sendKeys("Coimbatore");
+        driver.findElement(By.id("mobile")).sendKeys("1213124536");
+        driver.findElement(By.id("email")).sendKeys("Rajesh@test.Coimbatore");
+    }
+    
+    @When("user click submit button")
+    public void user_click_submit_button() {
+        // Implement code to click the submit button
+        driver.findElement(By.id("submit")).click();
+    }
+    
+    @Then("it should display the result")
+    public void it_should_display_the_result() {
+        // Implement code to get the result and print it in console
+        // store it in a string 'result'
+        String result = driver.findElement(By.id("result")).getText();
+        
+        
+        //Verify the result message with assert
+        Assert.assertTrue(result.contains("Rajesh"));
+    }
+    
+    
+    @Then("close the driver")
+    public void close_the_driver() {
+        // Implement code to close the driver
+        driver.quit();
+    }
+	
+}
+
+testng.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
+<suite name="Suite" verbose="1">
+  <test name="Test">
+    <classes>
+       <class name="CucumberRunnerTests"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+
+Cucumber - Shopify
+
+DriverSetup.java 
+
+//CREATE DRIVER USING THIS CLASS. YOU CAN MODIFY THIS CLASS
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.FirefoxBinary;
+
+public class DriverSetup {
+    public static WebDriver getDriver() {
+		
+		/*  For Chrome Browser,
+		    please modify the below driver setup code
+		*/
+		
+		System.out.println("Launching Firefox browser..");
+		System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+		
+		FirefoxBinary firefoxBinary = new FirefoxBinary();
+		firefoxBinary.addCommandLineOptions("--headless");
+		FirefoxProfile profile=new FirefoxProfile();
+	    FirefoxOptions firefoxOptions = new FirefoxOptions();
+		firefoxOptions.setBinary(firefoxBinary);
+		firefoxOptions.setProfile(profile);
+		
+		WebDriver driver = new FirefoxDriver(firefoxOptions);
+		return driver;
+	}
+}
+
+ShopifyPage.feature 
+Feature: Shopify form submission
+ 
+Scenario: Add Shopify Details
+    Given Start firefox browser
+    Then user navigate to the application home page
+    When user enters Firstname as "John", Lastname as "David", Username as "johntestuser", City as "Chennai", Gender as "male" and Password as "john@123"
+    When user click Register button
+    Then it should display the result get the Firstname
+    Then close the driver
+    
+  ShopifyPageDefinition.java
+  
+  //DO NOT CHANGE THE GIVEN TEMPLATE CODE. 
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import java.util.concurrent.TimeUnit;
+ 
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+ 
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+ 
+import org.junit.*;
+ 
+public class ShopifyPageDefinition {   // DO NOT CHANGE THE CLASS NAME
+ 
+    // Use the below declared variable
+	public static WebDriver driver;
+	//DO NOT CHANGE GIVEN SET OF CODE TO CREATE 'DRIVER'
+	@Given("Start firefox browser")
+	public void Start_firefox_browser() {
+	    driver=DriverSetup.getDriver();
+	}
+	@Then("user navigate to the application home page")
+    public void user_navigate_to_the_application_home_page() {
+        driver.get("https://webapps.tekstac.com/Shopify/");
+    }
+ 
+    @When("user enters Firstname as {string}, Lastname as {string}, Username as {string}, City as {string}, Gender as {string} and Password as {string}")
+    public void user_enters_Firstname_as_Lastname_as_Username_as_City_as_Gender_as_and_Password_as(String firstname, String lastname, String username, String city, String gender, String password) {
+        driver.findElement(By.id("firstname")).sendKeys(firstname);
+        driver.findElement(By.id("lastname")).sendKeys(lastname);
+        driver.findElement(By.id("username")).sendKeys(username);
+        Select select=new Select(driver.findElement(By.id("selectcity")));
+        select.selectByVisibleText(city);
+        driver.findElement(By.xpath("//input[@value='"+gender+"']")).click();
+        driver.findElement(By.id("pass")).sendKeys(password);
+    }
+ 
+    @When("user click Register button")
+    public void user_click_Register_button() {
+        driver.findElement(By.id("reg")).click();
+    }
+ 
+    @Then("it should display the result get the Firstname")
+    public void it_should_display_the_result_get_the_Firstname() {
+        String result = driver.findElement(By.xpath("//*[@id='tbrow'][1]")).getText();
+        System.out.println("Displayed Firstname: " + result);
+        Assert.assertEquals("Siva Kumar SivaKumar Coimbatore", result);
+    }
+ 
+    @Then("close the driver")
+    public void close_the_driver() {
+        driver.quit();
+    }
+}
+
+testng.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">-->
+<suite name="Suite" verbose="1">
+  <test name="Test">
+    <classes>
+       <class name="CucumberRunnerTests"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+ 
